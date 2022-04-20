@@ -7,7 +7,15 @@
     ],
     "workbench.colorTheme": "Tokyo Night",
     "editor.tokenColorCustomizations": {
-        "comments": "#D3D3D3"
+        "comments": "#D3D3D3",
+        "textMateRules": [
+            {
+                "scope": "comment.block.documentation",
+                "settings": {
+                    "foreground": "#D3D3D3"
+                }
+            }
+        ]
     },
     "workbench.colorCustomizations": {
         "scrollbarSlider.background": "#bec5d3",
