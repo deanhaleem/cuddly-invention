@@ -1,0 +1,17 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "eslint.validate": [
+        "javascript"
+    ],
+    "workbench.colorTheme": "Tokyo Night",
+    "editor.tokenColorCustomizations": {
+        "comments": "#D3D3D3"
+    },
+    "workbench.colorCustomizations": {
+        "scrollbarSlider.background": "#bec5d3",
+        "scrollbarSlider.hoverBackground": "#888b92",
+        "scrollbarSlider.activeBackground": "#888b92"
+    }
+}
