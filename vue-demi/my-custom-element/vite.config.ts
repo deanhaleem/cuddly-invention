@@ -1,19 +1,19 @@
-import { fileURLToPath, URL } from "node:url";
+import { fileURLToPath, URL } from 'node:url';
 
-import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
 
 export default defineConfig({
   plugins: [vue({ customElement: true })],
   optimizeDeps: {
-    exclude: ["vue-demi"],
+    exclude: ['vue-demi'],
   },
   build: {
     lib: {
-      entry: "/src/index.ts",
-      name: "vue-demi-component",
-      fileName: "index",
-      formats: ["cjs"],
+      entry: '/src/index.ts',
+      name: 'vue-demi-component',
+      fileName: 'index',
+      formats: ['cjs'],
     },
   },
 });
