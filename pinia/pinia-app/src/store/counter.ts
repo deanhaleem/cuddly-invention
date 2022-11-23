@@ -18,8 +18,14 @@ export const useCounterStoreRef = defineStore('counter', () => {
     name,
   });
 
-  // Having inconsistent results with this one. Sometimes it works, but mosttime
-  // count is undefined
+  // Just using this and returning state.value.count.value is also not working
+  // const state = useSessionStorage('my-key-ref', {
+  //   count: ref(0),
+  //   name: ref('Dean'),
+  // });
+
+  // Having inconsistent results with this one. Sometimes it works, but most times
+  // count is undefined at first
 
   // let { count } = toRefs(
   //   useSessionStorage('my-key-ref', {
@@ -34,5 +40,7 @@ export const useCounterStoreRef = defineStore('counter', () => {
     count.value++;
   }
 
+  // returning count: state.value.count from commented out code above
+  // did not seem to work (count undefined)
   return { count, doubleCount, increment };
 });
