@@ -21,10 +21,10 @@ export const useCounterStoreRef = defineStore('counter', () => {
   // Just using this and returning state.value.count.value is also not working
   // But returning state: state.value does work and actually seems to not need the
   // storeToRefs. However still including it doesn't seem to hurt anything
-  const state = useSessionStorage('my-key-ref', {
-    count: 0,
-    name: 'Dean',
-  });
+  // const state = useSessionStorage('my-key-ref', {
+  //   count: 0,
+  //   name: 'Dean',
+  // });
 
   // Doing this was giving null issues in the browser
   // const state = useSessionStorage('my-key-ref', {
@@ -32,25 +32,35 @@ export const useCounterStoreRef = defineStore('counter', () => {
   //   name: ref('Dean'),
   // });
 
-  // Having inconsistent results with this one. Sometimes it works, but most times
-  // count is undefined at first
+  // Having inconsistent results with this one. Somtimes count is undefined, not sure
+  // This is the ideal one IMO
+  const { count, customerInfo } = toRefs(
+    useSessionStorage('my-key-ref', {
+      count: 0,
+      customerInfo: {
+        firstName: 'Dean',
+        job: {
+          title: 'swe',
+          years: '2',
+        },
+      },
+    }).value
+  );
 
-  // let { count } = toRefs(
-  //   useSessionStorage('my-key-ref', {
-  //     count: 0,
-  //     name: 'Dean',
-  //   }).value
-  // );
-
-  const doubleCount = computed(() => state.value.count * 2);
+  const doubleCount = computed(() => count.value * 2);
 
   function increment() {
-    state.value.count++;
+    count.value++;
   }
 
   // returning count: state.value.count from commented out code above
   // did not seem to work (count undefined). Look like it's the storeToRefs
   // that causes that in the vue file
 
-  return { state: state.value, doubleCount, increment };
+  return {
+    count,
+    customerInfo,
+    doubleCount,
+    increment,
+  };
 });

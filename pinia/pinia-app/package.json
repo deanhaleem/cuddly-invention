@@ -2,7 +2,7 @@
   "name": "pinia-app",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --force",
     "preview": "vite preview",
     "build": "vite build"
   },
