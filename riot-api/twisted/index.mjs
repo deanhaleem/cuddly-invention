@@ -1,6 +1,6 @@
 import { LolApi, Constants } from 'twisted';
 
-const api = new LolApi('RGAPI-790c7753-3009-47d7-9729-a79476a2739f');
+const api = new LolApi(process.env.RIOT_TOKEN);
 
 const summonerResponse = await api.Summoner.getByName(
   'fifa4life',
