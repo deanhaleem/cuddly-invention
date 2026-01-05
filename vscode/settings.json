@@ -1,25 +1,76 @@
 {
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
-    },
-    "eslint.validate": [
-        "javascript"
-    ],
-    "workbench.colorTheme": "Tokyo Night",
-    "editor.tokenColorCustomizations": {
-        "comments": "#D3D3D3",
-        "textMateRules": [
-            {
-                "scope": "comment.block.documentation",
-                "settings": {
-                    "foreground": "#D3D3D3"
-                }
-            }
-        ]
-    },
-    "workbench.colorCustomizations": {
-        "scrollbarSlider.background": "#bec5d3",
-        "scrollbarSlider.hoverBackground": "#888b92",
-        "scrollbarSlider.activeBackground": "#888b92"
-    }
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.validate": ["javascript", "typescript"],
+  "editor.formatOnSave": true,
+  "eslint.format.enable": true,
+  "eslint.workingDirectories": [{ "mode": "auto" }],
+  "workbench.colorTheme": "Tokyo Night",
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "name": "Comment",
+        "scope": [
+          "comment",
+          "comment.block.documentation",
+          "punctuation.definition.comment",
+          "comment.block.documentation punctuation"
+        ],
+        "settings": {
+          "foreground": "#646e9c"
+        }
+      },
+      {
+        "name": "Comment Doc",
+        "scope": [
+          "comment.block.documentation variable",
+          "comment.block.documentation storage",
+          "comment.block.documentation keyword",
+          "comment.block.documentation support",
+          "comment.block.documentation markup",
+          "comment.block.documentation markup.inline.raw.string.markdown",
+          "meta.other.type.phpdoc.php keyword.other.type.php",
+          "meta.other.type.phpdoc.php support.other.namespace.php",
+          "meta.other.type.phpdoc.php punctuation.separator.inheritance.php",
+          "meta.other.type.phpdoc.php support.class",
+          "keyword.other.phpdoc.php",
+          "log.date"
+        ],
+        "settings": {
+          "foreground": "#646e9c"
+        }
+      },
+      {
+        "name": "Comment Doc Emphasized",
+        "scope": [
+          "meta.other.type.phpdoc.php support.class",
+          "comment.block.documentation storage.type",
+          "comment.block.documentation punctuation.definition.block.tag",
+          "comment.block.documentation entity.name.type.instance"
+        ],
+        "settings": {
+          "foreground": "#646e9c",
+          "fontStyle": "bold"
+        }
+      }
+    ]
+  },
+  "workbench.colorCustomizations": {
+    "scrollbarSlider.background": "#bec5d3",
+    "scrollbarSlider.hoverBackground": "#888b92",
+    "scrollbarSlider.activeBackground": "#888b92",
+    "editorLineNumber.foreground": "#666f9c",
+    "editorLineNumber.activeForeground": "#aab4ef"
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "liveServer.settings.CustomBrowser": "chrome",
+  "terminal.integrated.scrollback": 99999
 }

@@ -1,0 +1,19 @@
+{
+  "name": "cuddly-invention",
+  "version": "1.0.0",
+  "description": "Random stuff",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deanhaleem/cuddly-invention.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deanhaleem/cuddly-invention/issues"
+  },
+  "homepage": "https://github.com/deanhaleem/cuddly-invention#readme"
+}

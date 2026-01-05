@@ -1,5 +1,5 @@
 {
-  "name": "twisted",
+  "name": "typescript",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,6 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "twisted": "^1.51.0"
+    "lodash.camelcase": "^4.3.0",
+    "lodash.transform": "^4.6.0"
+  },
+  "devDependencies": {
+    "@types/lodash.camelcase": "^4.3.9",
+    "@types/lodash.transform": "^4.6.9"
   }
 }
